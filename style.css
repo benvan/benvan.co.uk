@@ -104,7 +104,7 @@ a {
 
 .avatar-wrapper {
     left: 50%;
-    top: -55px;
+    top: -57px;
     margin: 0 0 0 -54px;
     position: absolute;
     border: 1px solid #D3D3D3;
@@ -118,7 +118,7 @@ a {
     position: relative;
     height: 350px;
     overflow: hidden;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #B3B3B3;
 }
 
 .header-image-corners{
@@ -217,7 +217,8 @@ a {
 }
 
 #header .content-wrapper{
-    border-top: 1px solid #999;
+    border-top: 1px solid #CECECE;
+    margin-top: 1px;
 }
 
 #header .content{
