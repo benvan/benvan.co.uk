@@ -7,6 +7,11 @@ body {
     margin:0;
 }
 
+#container{
+    width:700px;
+    margin:0 auto;
+}
+
 .heading{
     background-color: rgba(0,0,0,0.1);
     padding: 5px;
@@ -108,7 +113,6 @@ a {
     margin: 0 0 0 -54px;
     position: absolute;
     border: 1px solid #D3D3D3;
-    border-color: rgb(112, 112, 112) rgb(112, 112, 112) #D3D3D3 #D3D3D3;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -217,8 +221,7 @@ a {
 }
 
 #header .content-wrapper{
-    border-top: 1px solid #CECECE;
-    margin-top: 1px;
+    margin-top: 82px;
 }
 
 #header .content{
@@ -252,25 +255,52 @@ a {
 .stuff {
     padding: 45px 90px;
     list-style: none;
-    text-align: center;
     overflow-y: auto;
 }
 
 .stuff li{
     display: block;
     margin-bottom:42px;
-    min-height: 150px;
-    border: 1px solid #C4C4C4;
-    border-top: none;
-    background-color: rgba(0, 0, 0, 0.14);
-    box-shadow: 4px 4px #F1F1F1, 5px 5px rgba(0, 0, 0, 0.09);
-    border-left: none;
+    position:relative;
+    padding: 0;
+
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    overflow-y: auto;
+    background-color: rgba(200,200,200,0.13);
+    box-shadow: 1px 1px white, 1px 1px white inset;
+    /* border-top-color: white; */
 }
 
 .stuff li .preview{
-
+    float: right;
+    background-color: rgba(255,255,255,0.4);
+    padding: 10px;
+    border-left: 1px solid #DADADA;
+}
+.stuff li .preview img{
+    height:90px;
+    border-radius: 3px;
+    /* border: 1px solid #999; */
+    width: 90px;
 }
 
 .stuff li .content{
 
+    margin-left: 14px;
+}
+
+.stuff li .description{
+    font-size: 12pt;
+    color: #555;
+}
+
+.stuff li .content h2{
+    margin: 0px 0 4px;
+    padding-top: 16px;
+    letter-spacing: 2px;
+    font-size: 17pt;
+    border-bottom: 1px solid #EBEAFF;
+    display: block;
+    width: 100%;
 }
