@@ -265,6 +265,7 @@ a {
     background-color: rgba(200,200,200,0.13);
     box-shadow: 1px 1px white, 1px 1px white inset;
     min-height: 110px;
+    transition: 0.1s;
 }
 
 .stuff li .preview{
@@ -311,5 +312,17 @@ a {
 }
 
 .stuff li:hover .preview{
-    padding: 10px 13px;
+    /*padding: 10px 13px;*/
+}
+
+.stuff li .content a{
+    transition:0.15s;
+}
+.stuff li .description a{
+    transition:0.3s;
+    text-decoration: underline;
+}
+.stuff li .content a:hover{
+    color:rgb(235, 53, 82);
+    text-decoration: underline;
 }
