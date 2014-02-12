@@ -6,6 +6,9 @@
 <meta name="author" content="Ben van Enckevort">
 
 <link href="style.css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+
+<link href="fontello/fontello.css" rel="stylesheet"/>
 
 <!-- google analytics -->
 <script type="text/javascript">
@@ -41,6 +44,17 @@
                 <span class="sub-title">
                     I like to make stuff
                 </span>
+
+                <div class="links">
+                    <a id="email" title="hi @ this domain" target="_blank"><i class="icon-mail"></i></a>
+                    <a href="https://github.com/benvan"><i class="icon-github"></i></a>
+                    <a href="http://www.youtube.com/channel/UCZwA_EPQJgkUHagaq_6s2dQ"><i class="icon-youtube"></i></a>
+                    <a href="http://uk.linkedin.com/pub/benjamin-van-enckevort/25/688/63a"><i class="icon-linkedin"></i></a>
+                </div>
+                <div>
+                    <div class="email">best place to reach me is 'hi' @ this domain</div>
+                </div>
+
 
             </div>
         </div>
@@ -195,16 +209,17 @@
     </li>
 </ul>
 
-
-    <div class="footer">
-
-    You can find me on
-    <a href="https://github.com/benvan">github</a>,
-    <a href="http://www.youtube.com/channel/UCZwA_EPQJgkUHagaq_6s2dQ">youtube</a> and
-    <a href="http://uk.linkedin.com/pub/benjamin-van-enckevort/25/688/63a">linkedIn</a>
-
-
-    </div>
+    <script type="text/javascript">
+        var email = document.getElementsByClassName('email')[0];
+        var btn = document.getElementById('email');
+        var toggleEmail = function(val){ return function(){
+            var now = email.getAttribute('class').indexOf('shown') >= 0;
+            email.setAttribute('class','email ' + (((val == undefined) ? !now : val) ? 'shown' : '') )
+        }};
+        btn.addEventListener('click', toggleEmail());
+        btn.addEventListener('mouseover', toggleEmail(true));
+        btn.addEventListener('mouseout', toggleEmail(false));
+    </script>
 
 </div>
 </body>

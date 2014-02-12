@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('fontello.eot?46536010');
+  src: url('fontello.eot?46536010#iefix') format('embedded-opentype'),
+       url('fontello.woff?46536010') format('woff'),
+       url('fontello.ttf?46536010') format('truetype'),
+       url('fontello.svg?46536010#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('fontello.svg?46536010#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin:0px;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+}
+ 
+.icon-spin4:before { content: '\e806'; } /* '' */
+.icon-link:before { content: '\e808'; } /* '' */
+.icon-help:before { content: '\e802'; } /* '' */
+.icon-help-circled:before { content: '\e800'; } /* '' */
+.icon-download:before { content: '\e801'; } /* '' */
+.icon-export-alt:before { content: '\e804'; } /* '' */
+.icon-trash:before { content: '\e803'; } /* '' */
+.icon-mail:before { content: '\e80d'; } /* '' */
+.icon-github:before { content: '\e80c'; } /* '' */
+.icon-gplus:before { content: '\e80a'; } /* '' */
+.icon-linkedin:before { content: '\e807'; } /* '' */
+.icon-twitter:before { content: '\e80b'; } /* '' */
+.icon-youtube:before { content: '\e809'; } /* '' */
+.icon-facebook:before { content: '\e805'; } /* '' */
