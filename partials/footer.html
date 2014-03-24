@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    var email = document.getElementsByClassName('email')[0];
+    var btn = document.getElementById('email');
+    var toggleEmail = function(val){ return function(){
+        var now = email.getAttribute('class').indexOf('shown') >= 0;
+        email.setAttribute('class','email ' + (((val == undefined) ? !now : val) ? 'shown' : '') )
+    }};
+    btn.addEventListener('click', toggleEmail());
+    btn.addEventListener('mouseover', toggleEmail(true));
+    btn.addEventListener('mouseout', toggleEmail(false));
+</script>
+
+</div>

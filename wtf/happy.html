@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include partials/head.html %}
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <style>
+        .hint{
+            display:none;
+        }
+        .hinted .hint{
+            display:block;
+        }
+        .hinted #code{
+            display:none;
+        }
+    </style>
+
+</head>
+<body>
+    {% include partials/header.html %}
+        title = WTF does this code do?
+    {% endinclude %}
+
+    <div id="article" class="article">
+        <h2>Hint: it's probably not what you think</h2>
+
+        <pre id="code" class="prettyprint">var amIHappy = true
+
+var say = function(what){
+  return function(){ console.log(what); return say }
+}
+
+var happy = say('I like you')
+var angry = say('Garrrr!')
+
+// what should I say?
+(amIHappy ? happy : angry)()</pre>
+        <pre id="codehint" class="hint prettyprint">var amIHappy = true
+
+var say = function(what){
+  return function(){ console.log(what); /* return say */ }
+}
+
+var happy = say('I like you')
+var angry = say('Garrrr!')
+
+// what should I say?
+(amIHappy ? happy : angry)()</pre>
+        <div id="btn" class="button">Run me!</div>
+        <div id="results" style="display:inline-block; padding-left:15px; vertical-align: top;"></div>
+
+        <div id="hint" class="button blue" style="float:right">(obscure) hint...</div>
+        <div class="hint" style="float:right; margin-right:15px;"> &lt;-- now try again</div>
+    </div>
+
+    <script type="text/javascript">
+        var article = document.getElementById('article');
+        var hinted = function(){
+            return article.getAttribute('class').indexOf('hinted') >= 0;
+        };
+
+        var btn = document.getElementById('btn');
+        var hint = document.getElementById('hint');
+        var output = document.getElementById('results');
+
+        btn.addEventListener('click', function(){
+
+            output.innerHTML = '';
+            var result = '';
+            var old_log = console.log;
+
+            console.error = console.log = function(x){
+                result = x;
+            };
+            var code = document.getElementById(hinted() ? 'codehint' : 'code');
+            try{
+                eval(code.innerText);
+            } catch (e){
+                result += '</br>' + e;
+            }
+            setTimeout(function(){
+                output.innerHTML = result;
+            },150);
+            console.log = old_log;
+        });
+
+        hint.addEventListener('click',function(){
+            article.setAttribute('class', 'article ' + ((hinted()) ? '' : 'hinted') );
+        });
+
+    </script>
+
+    {% include partials/footer.html %}
+
+
+
+</body>
+</html>

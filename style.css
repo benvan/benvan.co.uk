@@ -56,7 +56,7 @@ a {
     display: none;
 }
 
-.stuff img {
+.stuff .preview img {
     height: 100%;
 }
 
@@ -97,14 +97,14 @@ a {
     opacity: 0.11;
     background-position-x: center;
     min-width:700px;
+    z-index: -999;
 }
 
 .avatar-wrapper {
-    left: 50%;
-    top: -57px;
-    margin: 0 0 0 -54px;
-    position: absolute;
+    margin:0;
+    display: inline-block;
     border: 1px solid #CACACA;
+    margin-top:-60px;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -219,24 +219,19 @@ a {
 #header .content{
     margin-left: auto;
     margin-right: auto;
-    padding: 7px 60px;
+    padding: 7px 0px;
     position: relative;
     z-index: 2;
-    max-width: 400px;
+    max-width: 640px;
     min-width: 270px;
     background-image: url('img/paper_fibers.png');
     background-position-y: 0px;
     margin-top: 9px;
 }
 
-#header .content h1{
-    font-size: 42px;
-    line-height: 1;
-    margin: 60px 0 0;
-    word-wrap: break-word;
-    box-shadow: 0 1px 0 0 rgba(253, 253, 253, 0.91);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    padding-bottom: 12px;
+#header .content.home{
+    max-width:400px;
+    padding-top:60px;
 }
 
 .sub-title{
@@ -245,6 +240,36 @@ a {
     display:block;
     letter-spacing: 2px;
     color: #6B6B6B;
+}
+
+#header .content h1{
+    font-size: 42px;
+    line-height: 1;
+    margin: 22px 0 0;
+    word-wrap: break-word;
+    box-shadow: 0 1px 0 0 rgba(253, 253, 253, 0.91);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 0 28px 12px;
+    display: inline-block;
+}
+
+#header .content.home h1{
+    display:block;
+    padding:0;
+    padding-bottom:12px;
+}
+
+.article{
+    font-size:12pt;
+    line-height:1.7;
+    font-family:'Actor',sans-serif, inherit;
+    padding: 5px 20px 20px;
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    background-color: rgba(200,200,200,0.13);
+    box-shadow: 1px 1px white, 1px 1px white inset;
+    min-height: 110px;
+    margin-bottom: 150px;
 }
 
 .stuff {
@@ -293,7 +318,7 @@ a {
     margin-right: 130px;
 }
 
-.stuff li .description{
+.stuff li .description, .article p{
     font-variant: normal;
     font-weight: 400;
     line-height: 1.75;
@@ -301,7 +326,11 @@ a {
     color: #6A7386;
 }
 
-.stuff li .content h2{
+.article p{
+    font-size:14px;
+}
+
+.stuff li .content h2, .article h2{
     margin: 0px 0 5px;
     padding-top: 12px;
     letter-spacing: 2px;
@@ -326,7 +355,7 @@ a{
     transition:0.3s;
     text-decoration: underline;
 }
-a:hover{
+a:hover, .article a{
     color:rgb(235, 53, 82);
     text-decoration: underline;
 }
@@ -370,4 +399,39 @@ a:hover{
 
 .shown{
     opacity:1;
+}
+
+.video{
+    height: 315px;
+    width: 508px;
+    margin: 44px auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.prettyprint{
+    font-size:9pt;
+    padding:7px 15px !important;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 3px;
+    margin: 28px 15px;
+}
+
+.button{
+    border: 1px solid #4cae4c;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-shadow: 1px 1px rgb(6, 148, 0);
+    color: #fff;
+    background-color: #79D479;
+    cursor:pointer;
+}
+
+.button.blue{
+    border-color: #3366ff;
+    background-color: #6c9aff;
+    text-shadow: 1px 1px rgb(71, 54, 255)
 }

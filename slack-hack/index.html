@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <title>Ben van Enckevort | benvan</title>
+    <meta name="description" content="Ben van Enckevort | benvan">
+    <meta name="keywords" content="benvan, Ben van Enckevort">
+    <meta name="author" content="Ben van Enckevort">
+
+    <link href="../style.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+
+    <link href="../fontello/fontello.css" rel="stylesheet"/>
+
+    <!-- google analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35201182-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+<body>
+<div class="bg-img"></div>
+
+<div id="container">
+    <div class="header-wrapper">
+
+        <header id="header">
+
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="inner-content">
+
+                        <h1 style="margin-top:4px">Slack-Hack</h1>
+
+                        <span class="sub-title">
+                            <a href="../">home</a>
+                        </span>
+
+                        <div class="links">
+                            <a id="email" title="hi @ this domain" target="_blank"><i class="icon-mail"></i></a>
+                            <a href="https://github.com/benvan"><i class="icon-github"></i></a>
+                            <a href="http://twitter.com/benvan87"><i class="icon-twitter"></i></a>
+                            <a href="http://www.youtube.com/channel/UCZwA_EPQJgkUHagaq_6s2dQ"><i class="icon-youtube"></i></a>
+                            <a href="http://uk.linkedin.com/pub/benjamin-van-enckevort/25/688/63a"><i class="icon-linkedin"></i></a>
+                        </div>
+                        <div>
+                            <div class="email">best place to reach me is 'hi' @ this domain</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="back-to-top"><a class="top" href="#"></a></div>
+        </header>
+    </div>
+
+
+    <ul class="stuff">
+        <li style="padding:5px">
+            <iframe width="100%" height="315" src="//www.youtube.com/embed/dhVsZT0-NWw" frameborder="0" allowfullscreen></iframe>
+        </li>
+        <li>
+            <div class="content">
+                <a href="https://gist.github.com/benvan/9111039"><h2>the code</h2></a>
+                <div class="description">
+                    <p>Code is here: <a href="https://gist.github.com/benvan/9111039">https://gist.github.com/benvan/9111039</a><p/>
+                    <p>To install: Follow instructions at top of gist.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+
+    <script type="text/javascript">
+        var email = document.getElementsByClassName('email')[0];
+        var btn = document.getElementById('email');
+        var toggleEmail = function(val){ return function(){
+            var now = email.getAttribute('class').indexOf('shown') >= 0;
+            email.setAttribute('class','email ' + (((val == undefined) ? !now : val) ? 'shown' : '') )
+        }};
+        btn.addEventListener('click', toggleEmail());
+        btn.addEventListener('mouseover', toggleEmail(true));
+        btn.addEventListener('mouseout', toggleEmail(false));
+    </script>
+
+</div>
+</body>
+</html>
